@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  header #logo-1 {
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 2rem; }
+  header i {
+    margin-right: 55px;
+    margin-top: 80px;
+    color: #ffe5e8; }
+
+#bio {
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+#container {
+  display: flex;
+  margin: 0 50px;
+  justify-content: space-between; }
+  #container #content {
+    width: 70%;
+    display: flex;
+    flex-direction: column; }
+
+/*# sourceMappingURL=style.css.map */
