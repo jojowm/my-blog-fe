@@ -4,36 +4,84 @@
     box-sizing: border-box;
 }
 
+$pink: rgb(218, 152, 130);
+$grey: rgb(233, 233, 233);
 header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     #logo-1 {
         margin-top: 60px;
-        margin-left: 50px;
-        font-size: 2rem;
-        // font-family: Zapf Chancery;
+        margin-left: 150px;
+        font-size: 2rem; // font-family: Zapf Chancery;
     }
-    i {
-        margin-right: 55px;
+    #menu-btn {
+        margin-right: 150px;
         margin-top: 80px;
-        color: #ffe5e8;
+        color: $pink;
     }
 }
 
 #bio {
-    margin-left: 50px;
+    margin-left: 150px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 #container {
     display: flex;
-    margin: 0 50px;
+    margin: 0 150px;
     justify-content: space-between;
     #content {
         width: 70%;
         display: flex;
         flex-direction: column;
+        .abstract {
+            width: 100%;
+            height: 800px;
+            margin-bottom: 30px;
+            border: 1px solid $grey;
+            img {
+                width: 100%;
+                height: 70%;
+            }
+            .abs-txt {
+                width: 100%;
+                height: auto;
+                .abs-title {
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                .abs-article {
+                    font-size: 1rem;
+                    text-align: justify;
+                    margin: 10px 20px;
+                }
+            }
+            .abs-info {
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                margin-top: 30px;
+                .grey-icon {
+                    // margin-left: 50px;
+                    color: rgb(192, 193, 195);
+                }
+                .date,
+                .cls-name {
+                    display: inline-block;
+                    margin-left: 10px;
+                    font-size: 1rem;
+                }
+                .date {
+                    margin-right: 50px;
+                }
+                .cls-name {
+                    color: $pink;
+                }
+            }
+        }
     }
 }
