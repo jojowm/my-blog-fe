@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background: $bg;
+}
 $pink: rgb(218, 152, 130);
 $grey: rgb(233, 233, 233);
+$bg: rgb(245,245,245);
+
 header {
     display: flex;
     justify-content: space-between;
@@ -81,6 +85,67 @@ header {
                 .cls-name {
                     color: $pink;
                 }
+            }
+        }
+    }
+    #sidebar {
+        width: 25%;
+        height: 1100px;
+        // border: 1px solid $grey;
+        #user-pic {
+            width: 100%;
+            height: 200px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        #about-me, #follow-me, #search-site, #tags, #categories, #latest-posts {
+            width: 100%;
+        }
+        .side-title {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        #follow-me {
+            i {
+                margin-right: 10px;
+            }
+        }
+        #search-site {
+            margin-top: 30px;
+            position: relative;
+            input {
+                width: 80%;
+                height: 2rem;
+                font-size: 1rem; 
+            }
+            i {
+                position: absolute;
+                right: 60px;
+                top: 7px;
+            }
+        }
+        #tags {
+            margin-top: 30px;
+            span {
+                margin: 5px;
+                line-height: 2rem;
+                border: 1px solid $grey;
+            }
+        }
+        #categories {
+            margin-top: 30px;
+            li{
+                list-style: none;
+                line-height: 2rem;
+            }
+        }
+        #latest-posts {
+            margin-top: 30px;
+            p {
+                line-height: 2rem;
             }
         }
     }
