@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background: $bg;
-}
+
 $pink: rgb(218, 152, 130);
 $grey: rgb(233, 233, 233);
 $bg: rgb(245,245,245);
+
+body {
+    background: $bg;
+}
 
 header {
     display: flex;
@@ -17,12 +19,18 @@ header {
     #logo-1 {
         margin-top: 60px;
         margin-left: 150px;
-        font-size: 2rem; // font-family: Zapf Chancery;
+        font-size: 2rem; 
+        &:hover {
+            cursor: pointer;
+        }
     }
     #menu-btn {
         margin-right: 150px;
         margin-top: 80px;
         color: $pink;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -30,6 +38,9 @@ header {
     margin-left: 150px;
     margin-top: 50px;
     margin-bottom: 50px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 #container {
@@ -48,6 +59,9 @@ header {
             img {
                 width: 100%;
                 height: 70%;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             .abs-txt {
                 width: 100%;
@@ -57,11 +71,19 @@ header {
                     text-align: center;
                     margin-top: 20px;
                     margin-bottom: 10px;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
                 }
                 .abs-article {
                     font-size: 1rem;
                     text-align: justify;
                     margin: 10px 20px;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
                 }
             }
             .abs-info {
@@ -70,14 +92,20 @@ header {
                 text-align: center;
                 margin-top: 30px;
                 .grey-icon {
-                    // margin-left: 50px;
                     color: rgb(192, 193, 195);
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 .date,
                 .cls-name {
                     display: inline-block;
                     margin-left: 10px;
                     font-size: 1rem;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
                 }
                 .date {
                     margin-right: 50px;
@@ -91,13 +119,16 @@ header {
     #sidebar {
         width: 25%;
         height: 1100px;
-        // border: 1px solid $grey;
         #user-pic {
             width: 100%;
             height: 200px;
             img {
                 width: 100%;
                 height: 100%;
+            }
+            &:hover {
+                cursor: pointer;
+                border: 2px solid $grey;
             }
         }
         #about-me, #follow-me, #search-site, #tags, #categories, #latest-posts {
@@ -107,10 +138,24 @@ header {
             margin-top: 30px;
             margin-bottom: 10px;
             font-size: 1.5rem;
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+                color: $pink;
+            }
+        }
+        #about-me-txt {
+            &:hover {
+                cursor: pointer;
+            }
         }
         #follow-me {
             i {
                 margin-right: 10px;
+                &:hover {
+                    color: $pink;
+                    cursor: pointer;
+                }
             }
         }
         #search-site {
@@ -131,8 +176,16 @@ header {
             margin-top: 30px;
             span {
                 margin: 5px;
-                line-height: 2rem;
+                padding: 5px;
+                line-height: 2.5rem;
                 border: 1px solid $grey;
+                border-radius: 5px;
+                &:hover {
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    color: $pink;
+                    border-color: $pink;
+                }
             }
         }
         #categories {
@@ -140,12 +193,22 @@ header {
             li{
                 list-style: none;
                 line-height: 2rem;
+                &:hover {
+                    cursor: pointer;
+                    color: $pink;
+                    font-size: 1.2rem;
+                }
             }
         }
         #latest-posts {
             margin-top: 30px;
             p {
                 line-height: 2rem;
+                &:hover:not(:first-child) {
+                    cursor: pointer;
+                    color: $pink;
+                    font-size: 1.2rem;
+                }
             }
         }
     }
