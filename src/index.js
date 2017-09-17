@@ -21,17 +21,14 @@ window.onload = function() {
   });
 
   let menuBtn = document.getElementById("menu-btn");
-  let menuWrap = document.getElementById("menu-wrap");
+  let modal = document.getElementById("modal");
   let menu = document.getElementById('menu');
 
 //   点击menu-btn按钮出现menu
   menuBtn.onclick = function() {
-   if (hasClass(menuWrap, 'hide')) {
-       menuWrap.className = 'show';
+   if (hasClass(modal, 'hide')) {
+       modal.className = 'show';
        menu.className = 'showMenu';
-       menu.style.transform = 'translate3d(-300px, 0, 0)'
-   } else {
-       menu.style.transform = ''
    }
   };
 

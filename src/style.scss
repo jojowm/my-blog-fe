@@ -6,8 +6,7 @@
 
 $pink: rgb(218, 152, 130);
 $grey: rgb(233, 233, 233);
-$bg: rgb(245,245,245);
-
+$bg: rgb(245, 245, 245);
 body {
     background: $bg;
 }
@@ -19,7 +18,7 @@ header {
     #logo-1 {
         margin-top: 60px;
         margin-left: 150px;
-        font-size: 2rem; 
+        font-size: 2rem;
         &:hover {
             cursor: pointer;
         }
@@ -131,7 +130,12 @@ header {
                 border: 2px solid $grey;
             }
         }
-        #about-me, #follow-me, #search-site, #tags, #categories, #latest-posts {
+        #about-me,
+        #follow-me,
+        #search-site,
+        #tags,
+        #categories,
+        #latest-posts {
             width: 100%;
         }
         .side-title {
@@ -164,7 +168,7 @@ header {
             input {
                 width: 80%;
                 height: 2rem;
-                font-size: 1rem; 
+                font-size: 1rem;
             }
             i {
                 position: absolute;
@@ -190,7 +194,7 @@ header {
         }
         #categories {
             margin-top: 30px;
-            li{
+            li {
                 list-style: none;
                 line-height: 2rem;
                 &:hover {
@@ -214,7 +218,7 @@ header {
     }
 }
 
-#menu-wrap {
+#modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -224,14 +228,16 @@ header {
     outline: 0;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 999;
-    #menu {
-        position: absolute;
-        right: -300px;
-        width: 300px;
-        height: 100%;
-        background: #fff;
-        // transition-duration: 500ms;
-    }
+}
+
+#menu {
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 9999;
+    background: #fff; 
 }
 
 .hide {
@@ -240,10 +246,9 @@ header {
 
 .show {
     display: block;
-  
 }
 
 .showMenu {
-    //   transform: translate3d(-300px, 0, 0);
-        transition: all 5s ease; 
+      transform: translate3d(-300px, 0, 0);
+    transition: all .5s ease;
 }
