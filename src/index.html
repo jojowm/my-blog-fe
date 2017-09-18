@@ -6,6 +6,7 @@
     <title>my blog</title>
     <script src="https://use.fontawesome.com/07ee41c87c.js"></script>
     <script src="./jquery-3.2.1.js"></script>
+    <script src="./handlebars-v4.0.10.js"></script>
     <script src="./index.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -65,6 +66,24 @@
     <div id="modal" class="hide"></div>
     <div id="menu"></div>
     
+    <!-- handlebars.js模版 -->
+    <script id="abs-template" type="text/x-handlebars-template">
+        {{#each this}}
+            <div class="abstract">
+                <img src="{{pic}}" alt="first pic">
+                <div class="abs-txt">
+                    <p class="abs-title">{{title}}</p>
+                    <p class="abs-article">{{content}}</p>
+                </div>
+                <div class="abs-info">
+                    <i class="fa fa-calendar-minus-o grey-icon" aria-hidden="true"></i>
+                    <p class="date">{{date}}</p>
+                    <i class="fa fa-folder-open grey-icon" aria-hidden="true"></i>
+                    <p class="cls-name">{{cls}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </script>
 
 </body>
 
