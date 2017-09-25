@@ -1,30 +1,21 @@
 window.onload = function() {
   $.get("./article-data.json", function(data) {
-    // let content = document.getElementById("content");
-    // let dataLength = data.length;
-    // console.log(dataLength);
-    // for (let i = 0; i < dataLength; i++) {
-    //   content.innerHTML =
-    //     content.innerHTML +
-    //     '<div class="abstract"><img src="' +
-    //     data[i].pic +
-    //     '" alt="first pic"><div class="abs-txt"><p class="abs-title">' +
-    //     data[i].title +
-    //     '</p><p class="abs-article">' +
-    //     data[i].content +
-    //     '</p></div><div class="abs-info"><i class="fa fa-calendar-minus-o grey-icon" aria-hidden="true"></i><p class="date">' +
-    //     data[i].date +
-    //     '</p><i class="fa fa-folder-open grey-icon" aria-hidden="true"></i><p class="cls-name">' +
-    //     data[i].cls +
-    //     "</p></div></div>";
-    // }
+    // 注册handlebars事件，通过id找到一个模版
     let absTemplate = Handlebars.compile($('#abs-template').html());
+		// 将json数据用注册的模版封装
     $('#content').html(absTemplate(data));
   });
+
+ $.get("./tag.json", function(tag) {
+    let tagTemplate = Handlebars.compile($('#tag-template').html());
+    $('#tags-1').append(tagTemplate(tag));
+    $('#tags-2').append(tagTemplate(tag));
+ });
 
   let menuBtn = document.getElementById("menu-btn");
   let modal = document.getElementById("modal");
   let menu = document.getElementById('menu');
+  // let 
 
 //   点击menu-btn按钮出现menu
   menuBtn.onclick = function() {
