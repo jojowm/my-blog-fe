@@ -41,8 +41,22 @@ $bg: rgb(245, 245, 245);
     }
 }
 
+@mixin categoriesMixin() {
+            margin-top: 30px;
+            li {
+                list-style: none;
+                line-height: 2rem;
+                &:hover {
+                    cursor: pointer;
+                    color: $pink;
+                    font-size: 1.2rem;
+                }
+            }
+}
+
 body {
     background: $bg;
+    overflow-x: hidden;
 }
 
 header {
@@ -206,16 +220,7 @@ header {
             }
         }
         #categories {
-            margin-top: 30px;
-            li {
-                list-style: none;
-                line-height: 2rem;
-                &:hover {
-                    cursor: pointer;
-                    color: $pink;
-                    font-size: 1.2rem;
-                }
-            }
+            @include categoriesMixin();
         }
         #latest-posts {
             margin-top: 30px;
@@ -279,6 +284,17 @@ header {
         span {
             @include tag();
         }
+    }
+    #categories-2 {
+        position: absolute;
+        top: 600px;
+        right: 20px;
+        width: 75%; 
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        @include categoriesMixin();
     }
 }
 

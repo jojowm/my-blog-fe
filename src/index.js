@@ -12,6 +12,13 @@ window.onload = function() {
     $('#tags-2').append(tagTemplate(tag));
  });
 
+ $.get("./classification.json", function(classification) {
+   let clsTemplate = Handlebars.compile($('#cls-template').html());
+   $('#categories-2').append(clsTemplate(classification));
+   // menu高度初始化为body的高度
+   $('#menu').height(document.body.scrollHeight + 'px');
+ });
+
   let menuBtn = document.getElementById("menu-btn");
   let modal = document.getElementById("modal");
   let menu = document.getElementById('menu');

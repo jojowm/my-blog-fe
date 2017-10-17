@@ -78,6 +78,10 @@
         <div id="tags-2">
             <p>Tags.</p>
         </div>
+        <div id="categories-2">
+            <p>Categories.</p>
+            <ul></ul>
+        </div>
     </div>
 
 
@@ -104,6 +108,12 @@
     <script id="tag-template" type="text/x-handlebars-template">
         {{#each this}}
             <span>{{tag}}</span>
+        {{/each}}
+    </script>
+    <!-- categories的模版 -->
+    <script id="cls-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <li>{{classification}} ({{number}})</li>
         {{/each}}
     </script>
 
