@@ -15,8 +15,14 @@ window.onload = function() {
  $.get("./classification.json", function(classification) {
    let clsTemplate = Handlebars.compile($('#cls-template').html());
    $('#categories-2').append(clsTemplate(classification));
+   $('#categories').append(clsTemplate(classification));
    // menu高度初始化为body的高度
    $('#menu').height(document.body.scrollHeight + 'px');
+ });
+
+ $.get("./article.json", function(article) {
+  let latestPostsTemplate = Handlebars.compile($('#latest-posts-template').html());
+  $('#latest-posts-2').append(latestPostsTemplate(article));
  });
 
   let menuBtn = document.getElementById("menu-btn");
