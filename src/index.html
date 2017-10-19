@@ -41,11 +41,7 @@
             </div>
             <div id="categories">
                 <p class="side-title">Categories</p>
-                <ul>
-                    <li>classification 1 (2)</li>
-                    <li>classification 2 (5)</li>
-                    <li>classification 3 (1)</li>
-                </ul>
+                <ul></ul>
             </div>
             <div id="latest-posts">
                 <p class="side-title">Latest Posts</p>
@@ -82,6 +78,9 @@
             <p>Categories.</p>
             <ul></ul>
         </div>
+        <div id="latest-posts-2">
+            <p>Latest Posts</p>
+        </div>
     </div>
 
 
@@ -114,6 +113,12 @@
     <script id="cls-template" type="text/x-handlebars-template">
         {{#each this}}
         <li>{{classification}} ({{number}})</li>
+        {{/each}}
+    </script>
+    <!-- latest-posts的模版 -->
+    <script id="latest-posts-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <span>{{title}}</span>
         {{/each}}
     </script>
 

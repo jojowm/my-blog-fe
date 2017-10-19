@@ -42,16 +42,16 @@ $bg: rgb(245, 245, 245);
 }
 
 @mixin categoriesMixin() {
-            margin-top: 30px;
-            li {
-                list-style: none;
-                line-height: 2rem;
-                &:hover {
-                    cursor: pointer;
-                    color: $pink;
-                    font-size: 1.2rem;
-                }
-            }
+    margin-top: 30px;
+    li {
+        list-style: none;
+        line-height: 2rem;
+        &:hover {
+            cursor: pointer;
+            color: $pink;
+            font-size: 1.2rem;
+        }
+    }
 }
 
 body {
@@ -204,6 +204,7 @@ header {
         #follow-me {
             i {
                 margin-right: 10px;
+                margin-bottom: 10px;
                 &:hover {
                     color: $pink;
                     cursor: pointer;
@@ -276,7 +277,7 @@ header {
         position: absolute;
         top: 400px;
         right: 20px;
-        width: 75%; 
+        width: 75%;
         p {
             font-size: 1.5rem;
             margin-bottom: 10px;
@@ -289,12 +290,31 @@ header {
         position: absolute;
         top: 600px;
         right: 20px;
-        width: 75%; 
+        width: 75%;
         p {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
         @include categoriesMixin();
+    }
+    #latest-posts-2 {
+        position: absolute;
+        top: 900px;
+        right: 20px;
+        width: 75%;
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        span {
+            display: block;
+            line-height: 2rem;
+            &:hover:not(:first-child) {
+                cursor: pointer;
+                color: $pink;
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 
