@@ -28,7 +28,14 @@ window.onload = function() {
   let menuBtn = document.getElementById("menu-btn");
   let modal = document.getElementById("modal");
   let menu = document.getElementById('menu');
-  // let 
+
+  // 点击menu的close button，关闭菜单
+  $('#close-btn').click(function() {
+    if(hasClass(modal, 'show')) {
+     modal.className = 'hide';
+     menu.className = 'hideMenu'; 
+    }
+  }); 
 
 //   点击menu-btn按钮出现menu
   menuBtn.onclick = function() {
@@ -37,6 +44,20 @@ window.onload = function() {
        menu.className = 'showMenu';
    }
   };
+
+// 点击主页上每个abstract，都会跳转到显示全文的页面
+// 事件代理
+var content = document.getElementById('content');
+content.addEventListener('click', showFullArticle, false);
+function showFullArticle(e) {
+    e = e || window.event;
+    let targetElement = e.target || e.srcElement;
+    console.log(targetElement);
+}
+
+
+
+
 
   function hasClass(ele, cls) {
     return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
